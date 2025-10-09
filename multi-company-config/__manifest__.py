@@ -3,7 +3,7 @@
 
 {
     "name": "AFDOC Multi Company Config",
-    "version": "1.0",
+    "version": "1.1",
     "category": "Settings",
     "summary": "Configuration for multi-company setups",
     "description": """
@@ -16,5 +16,6 @@
     "data": [
         "views/res_partner_category_views.xml",
         "security/multi_company_security.xml",
+        "security/ir.model.access.csv",
     ],
 }
