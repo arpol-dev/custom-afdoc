@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_partner_form_mandat" model="ir.ui.view">
+        <field name="name">res.partner.form.view.mandat</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <data>
+                <field name="category_id" position="before">
+                    <field name="mandat_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create': True}"/>
+                </field>
+            </data>
+        </field>
+    </record>
+    <record id="res_partner_kanban_view_mandat" model="ir.ui.view">
+        <field name="name">res.partner.kanban.view.mandat</field>
+        <field name="inherit_id" ref="base.res_partner_kanban_view"/>
+        <field name="model">res.partner</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_kanban_partner_categories')]" position="inside">
+                <span class="oe_kanban_list_many2many">
+                    <field name="mandat_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                </span>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+"access_res_partner_mandat_all","res_partner_mandat all",partner_mandat.model_res_partner_mandat,,1,1,1,1

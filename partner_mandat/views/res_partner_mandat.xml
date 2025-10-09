@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_partner_mandat_list" model="ir.ui.view">
+        <field name="name">res.partner.mandat.list</field>
+        <field name="model">res.partner.mandat</field>
+        <field name="arch" type="xml">
+            <tree string="Mandats" editable="bottom">
+                <field name="name"/>
+                <field name="color" widget="color_picker"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_open_mandat" model="ir.actions.act_window">
+        <field name="name">Mandats</field>
+        <field name="res_model">res.partner.mandat</field>
+        <field name="view_mode">list</field>
+    </record>
+
+    <menuitem
+        id="res_partner_mandat_menu"
+        name="Types de mandats"
+        parent="contacts.res_partner_menu_config"
+        sequence="2"
+        action="action_open_mandat"/>
+</odoo>
